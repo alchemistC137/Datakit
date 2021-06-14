@@ -11,6 +11,7 @@ namespace dataOperations
         {
 
             string res = getData.getIdUser(usuario.userName );
+             System.Console.WriteLine($"Resultado query : {res}");
             if (res != null && res != String.Empty)
             {
                 return true;
