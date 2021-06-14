@@ -5,8 +5,8 @@ namespace AppTypes
 
     public class User
     {
-        public string name { get; set; }
-        public string pass { get; set; }
+        public string IdUsuario { get; set; }
+        public string userName { get; set; }
 
 
 

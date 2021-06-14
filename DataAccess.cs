@@ -12,14 +12,14 @@ using dataOperations;
 
 namespace Datakit
 {
-    public class DataAccess : IDataAccess
+    public class DataAccess 
     {
+         public static IConfiguration configuration;
         checkData checkData = new checkData();
-
-        private readonly IConfiguration config;
 
         public DataAccess()
         {
+            PoolConnection.configuration = configuration;
         }
 
         public bool checkCredentials(User usuario)
@@ -28,9 +28,6 @@ namespace Datakit
             return checkData.checkCredentials(usuario);
         }
 
-        public void IDisposable()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
