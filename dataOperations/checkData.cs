@@ -10,8 +10,14 @@ namespace dataOperations
         public bool checkCredentials(User usuario)
         {
 
-            string res = getData.getIdUser(usuario.userName );
-            if (res != null && res != String.Empty)
+            Guid? idUser = getData.getIdUser(usuario.userName);
+            usuario.IdUsuario = idUser;
+            Guid? idPass = getData.getIdPass(usuario);
+
+            System.Console.WriteLine($"Resultado query usuario: {idUser}");
+            System.Console.WriteLine($"Resultado query pass: {idPass}");
+
+            if (idUser != null && idPass != null)
             {
                 return true;
             }

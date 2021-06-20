@@ -54,7 +54,7 @@ namespace Datakit
             // config = configuration;
 
             MySqlConnection conex = new MySqlConnection(configuration.GetValue<string>($"ConnectionStrings:{conexName}"));
-
+            System.Console.WriteLine($"Conexion realizada");
             return conex;
 
 
@@ -76,10 +76,10 @@ namespace Datakit
             //             { 
             //                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
 
-            //                 builder.DataSource = "82.223.121.235"; 
-            //                 builder.UserID = "root";            
+            //                 builder.DataSource = ""; 
+            //                 builder.UserID = "";            
             //                 builder.Password = "";     
-            //                 builder.InitialCatalog = "pruebaBaseDatosMarco";
+            //                 builder.InitialCatalog = "";
 
             //                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             //                 {

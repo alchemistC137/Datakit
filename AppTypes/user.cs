@@ -5,8 +5,10 @@ namespace AppTypes
 
     public class User
     {
-        public string IdUsuario { get; set; }
+        internal Guid? IdUsuario { get; set; }
         public string userName { get; set; }
+        internal Guid? IdPass { get; set; }
+        public string password { get; set; }
 
 
 

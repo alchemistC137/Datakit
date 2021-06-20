@@ -19,6 +19,7 @@ namespace Datakit
             using (PoolConnection conex = new PoolConnection())
             {
                 T result = conex.getConnection(PoolConnection.ConnectionNames.app).QueryFirstOrDefault<T>(query);
+                System.Console.WriteLine($"query Lanzada: {query}");
                 return result;
             }
         }
