@@ -65,10 +65,6 @@ namespace Datakit
         public void temporal()
         {
 
-
-
-
-
             #region SQL connection
 
 
